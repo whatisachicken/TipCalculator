@@ -22,7 +22,7 @@
                                 <rect key="frame" x="47" y="188" width="29" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.068836280659999999" green="0.31555054090000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YNb-Ga-TpU" userLabel="Bill Amount">
@@ -36,7 +36,7 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="nS0-Xv-c7k"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-Ug-IY6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-Ug-IY6">
                                 <rect key="frame" x="222" y="188" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,7 +58,7 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
-                                <color key="tintColor" red="0.74824914553205946" green="0.5411855507038279" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.40267204153312264" blue="0.42950155575796323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="eeW-5W-hFr"/>
                                 </connections>
@@ -70,22 +70,15 @@
                                 <color key="textColor" red="0.068836280659999999" green="0.31555054090000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akO-vj-Gff">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akO-vj-Gff">
                                 <rect key="frame" x="222" y="323" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="$0.00">
-                                        <attributes>
-                                            <font key="NSFont" size="24" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.74845671395981817" green="0.98554267352099267" blue="1" alpha="0.76518485915492962" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.30298861836585755" green="0.93686983250478961" blue="1" alpha="0.80276188380281688" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.30298861840000002" green="0.9368698325" blue="1" alpha="0.80276188380000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -95,6 +88,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="m32-SB-o5T">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Frm-SN-Ser">
                             <connections>
+                                <action selector="Settings:" destination="BYZ-38-t0r" id="1ed-gG-tsf"/>
                                 <segue destination="jue-NA-Lve" kind="show" id="AqN-i0-KjE"/>
                             </connections>
                         </barButtonItem>
@@ -139,12 +133,15 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.65856604591704793" blue="0.2659516832735952" alpha="0.76518485920000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.53813908278639278" blue="0.84223423360474858" alpha="0.76518485920000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.73667241583669341" green="0.84236932512721452" blue="1" alpha="0.80276188380281688" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.44582111269621783" green="0.77307514882479311" blue="1" alpha="0.80276188380281688" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ncY-Um-psT"/>
                     </view>
+                    <connections>
+                        <outlet property="defaultTip" destination="bAf-Gg-i3p" id="Lf8-qU-HOQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ep9-iX-GkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

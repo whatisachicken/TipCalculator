@@ -17,10 +17,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func onTap(_ sender: Any) {
+        //Dismiss keyboard when user taps view
         view.endEditing(true)
     }
     @IBAction func calculateTip(_ sender: Any) {
@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         //Update the total
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+    }
+    @IBAction func Settings(_ sender: Any) {
+        self.billTextField.resignFirstResponder()
     }
 }
 
